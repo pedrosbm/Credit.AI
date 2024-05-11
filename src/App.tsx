@@ -1,9 +1,11 @@
 import { ChangeEvent, MouseEventHandler, useState } from 'react';
 import { Form, Resp } from './types';
+import 'normalize.css'
+import './App.css'
 
 const App = () => {
     const [formulario, setFormulario] = useState<Form>({});
-    const [previsao, setPrevisao] = useState<Resp>({})
+    const [resp, serResp] = useState<Resp>({})
 
     const handleSubmit = async (e: any) => {
         e.preventDefault()
@@ -17,7 +19,7 @@ const App = () => {
         }).then((data) => {
             return data.json()
         }).then((json) => {
-            setPrevisao(json)
+            serResp(json)
         }).catch((error) => {
             console.error("Erro ao fazer a requisição - " + error)
         })
@@ -31,7 +33,7 @@ const App = () => {
     return (
         <section>
             <form onSubmit={handleSubmit}>
-                <h1>Credit.<strong>AI</strong></h1>
+                <h1>Credit.<span>AI</span></h1>
 
                 <div className='inputBox'>
                     <label htmlFor="">Valor Solicitado: </label>
@@ -58,10 +60,21 @@ const App = () => {
                     <input type="number" name="ativoCirculante" required value={formulario.ativoCirculante} onChange={handleChange} />
                 </div>
 
-                <input className='submit' type="submit"/>
+                <h2>Resultado</h2>
 
-                <p>NovaTech Solutions© 2024</p>
+                <input disabled placeholder='R$00,00' className='result'>{resp.previsao}</input>
+
+                <input className='submit' type="submit" />
             </form>
+
+            <hr />
+
+            <footer>
+                <div>
+                    <h1>Credit.<span>AI</span></h1>
+                    <p>by <span>NovaTech Solutions© 2024</span></p>
+                </div>
+            </footer>
         </section>
     );
 }
