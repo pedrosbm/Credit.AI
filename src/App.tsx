@@ -4,7 +4,13 @@ import 'normalize.css'
 import './App.css'
 
 const App = () => {
-    const [formulario, setFormulario] = useState<Form>({});
+    const [formulario, setFormulario] = useState<Form>({
+        "titulosEmAberto": undefined,
+        "valorSolicitado": undefined,
+        "capitalSocial": undefined,
+        "passivoCirculante": undefined,
+        "ativoCirculante": undefined
+    });
     const [resp, serResp] = useState<Resp>({})
 
     const handleSubmit = async (e: any) => {
@@ -73,7 +79,7 @@ const App = () => {
 
                 <input className='submit' type="submit" />
             </form>
-            
+
             <hr />
 
             <footer>

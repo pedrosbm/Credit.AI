@@ -1,6 +1,6 @@
 type Form = {
-    valorSolicitado?: number,
     titulosEmAberto?: number,
+    valorSolicitado?: number,
     capitalSocial?: number,
     passivoCirculante?: number,
     ativoCirculante?: number
