@@ -7,7 +7,7 @@ type Form = {
 }
 
 type Resp = {
-    previsao?: number
+    previsao?: []
 }
 
 export type { Form, Resp }

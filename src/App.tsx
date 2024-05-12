@@ -13,7 +13,7 @@ const App = () => {
         await fetch('http://localhost:8080/prever', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify({ features: Object.values(formulario) })
         }).then((data) => {
@@ -29,6 +29,13 @@ const App = () => {
         const { name, value } = event.target;
         setFormulario({ ...formulario, [name]: value })
     };
+
+
+    const copy = (event: any) => {
+        event.preventDefault()
+
+        navigator.clipboard.writeText(event.target.value)
+    }
 
     return (
         <section>
@@ -62,11 +69,11 @@ const App = () => {
 
                 <h2>Resultado</h2>
 
-                <input disabled placeholder='R$00,00' className='result'>{resp.previsao}</input>
+                <input disabled placeholder='Crédito' value={resp.previsao} className='result' />
 
                 <input className='submit' type="submit" />
             </form>
-
+            
             <hr />
 
             <footer>
