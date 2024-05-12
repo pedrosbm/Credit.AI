@@ -1,4 +1,4 @@
-import { ChangeEvent, MouseEventHandler, useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import { Form, Resp } from './types';
 import 'normalize.css'
 import './App.css'
@@ -69,7 +69,7 @@ const App = () => {
 
                 <h2>Resultado</h2>
 
-                <input disabled placeholder='Crédito' value={resp.previsao} className='result' />
+                <input onClick={copy} disabled placeholder='Crédito' value={resp.previsao} className='result' />
 
                 <input className='submit' type="submit" />
             </form>
