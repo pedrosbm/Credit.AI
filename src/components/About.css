@@ -1,0 +1,62 @@
+main {
+    margin: auto;
+    margin-block: 10rem;
+    padding: 5rem 3rem;
+    background-color: white;
+    width: 80%;
+    border-radius: 1rem;
+}
+
+.presentation h1 {
+    font-size: 7rem;
+}
+
+.presentation p {
+    font-size: large;
+}
+
+.technology {
+    padding: 2rem;
+    border: 2px solid #8c52ff6d;
+    border-radius: 2rem;
+    width: 12rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+.technologies   {
+    margin-block: 10rem;
+}
+
+.technologies .list{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.technologies img {
+    width: 6rem;
+    object-fit: contain;
+}
+
+.checkout button    {
+    transition: all 200ms;
+    cursor: pointer;
+    padding: 1.5rem 10rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+    border: 3px solid #8c52ff;
+    background-color: #8c52ff;
+    color: white;    
+}
+
+.checkout button:hover    {
+    background-color: white ;
+    color: #8c52ff;    
+}

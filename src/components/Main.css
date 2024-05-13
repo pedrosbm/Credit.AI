@@ -14,10 +14,18 @@ section {
 }
 
 h1 {
+    cursor: pointer;
     margin: 0;
     text-align: center;
     font-weight: 300;
     font-size: 4rem;
+    transition: all 200ms;
+}
+
+h1:hover {
+    text-shadow: 0 0 20px #fff, 0 0 25px #8c52ff, 0 0 40px #8c52ff;
+    transform: scale(1.1);
+    color: #8c52ff;
 }
 
 h2 {
