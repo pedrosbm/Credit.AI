@@ -1,9 +1,9 @@
-main {
+.about {
     margin: auto;
-    margin-block: 10rem;
+    margin-block: 3rem;
     padding: 5rem 3rem;
     background-color: white;
-    width: 80%;
+    width:35rem;
     border-radius: 1rem;
 }
 
@@ -17,36 +17,33 @@ main {
 
 .technology {
     padding: 2rem;
-    border: 2px solid #8c52ff6d;
+    border-bottom: 2px solid #8c52ff6d;
     border-radius: 2rem;
-    width: 12rem;
-    height: 15rem;
+    width: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     text-align: center;
-
 }
 
 .technologies   {
-    margin-block: 10rem;
+    margin-block: 8rem;
 }
 
 .technologies .list{
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .technologies img {
-    width: 6rem;
-    object-fit: contain;
+    width: 5rem;
 }
 
 .checkout button    {
-    transition: all 200ms;
+    transition: 200ms;
     cursor: pointer;
     padding: 1.5rem 10rem;
     font-size: 2rem;

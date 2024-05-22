@@ -9,7 +9,7 @@ const About = () => {
     const goTo = useNavigate()
 
     return (
-        <main>
+        <main className='about'>
             <section className="presentation">
                 <p>NovaTech Solutions apresenta...</p>
 
